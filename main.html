@@ -102,18 +102,17 @@ Youtube貼り付けここまで -->
         v-if="next['stage1']"はnext['stage1']がtrueになったら表示します。
       ----------------------------------------------------------------------->
       <div v-if="next['stage1']" id="sectionStage2" class="stage">
-        <section>
-          <div class="section">
-            <div class="container">
-              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>ブレーカー室に行き電源を落とす</h2>
-              <p class="text-center">実験室からは逃げ出すことが出来たが…これからどう逃げようか迷っていると施設の構造を先に知っておく必要性が出てきたので地図を取りに書庫室へ向かう<br>
+        <<section class="section">
+          <div class="container">
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>研究所から脱出！</h2>
+       　　 <p class="text-center">実験室からは逃げ出すことが出来たが…これからどう逃げようか迷っていると施設の構造を先に知っておく必要性が出てきたので地図を取りに書庫室へ向かう<br>
                 書庫室の外から中を見てみると看守を発見してしまった…<br>
                 恐る恐る書庫室の中に入っていきなんとか地図を入手したが…看守に見つかってしまった</p>
-            </div>
+            <figure class="image__container">
+              <img src="assets/images/謎第二問目.png" alt="謎2">
+            </figure>
           </div>
-          <div class="stage-column__container section bg-color--keycolor">
-            <div class="container">
-              <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>パスワードを入力してください</h2>
+        </section>
               <!-------------------------------------------------------------
                 class名"row"内のclass名"column"が横並びになります。
                 改行する場合は以下のように追加してください。
@@ -123,49 +122,37 @@ Youtube貼り付けここまで -->
                   </div>
                 </div>
               ------------------------------------------------------------->
-              <div class="row">
-
-                <!-- STAGE2-1　ここから -->
-                <div class="column">
-                  <!-- STAGE2-1問題セクション　ここから -->
-                  <figure class="image__container">
-                    <img src="assets/images/謎第二問目.png" alt="謎2">
-                  </figure>
-                  <!-- STAGE2-1問題セクション　ここまで -->
-                  <!-- STAGE2-1解答入力セクション　ここから -->
-                  <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
-                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
-                  <!-- STAGE2-1解答入力セクション　ここまで -->
-                </div><!-- /.column -->
-                <!-- STAGE2-1　ここまで -->
+              <section class="section bg-color--keycolor">
+          <div class="container">
+            <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>一番左の答えを書きなさい</h2>
+           
+            <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1, 'stage3')"></answer-input>
+            <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+          </div>
+        </section>
 
 
 
-                <div class="column">
-
-                  <figure class="image__container">
-                    <img src="assets/images/謎第二問目.png" alt="">
-                  </figure>
-
-                  <answer-input v-bind:correct="correctAnswer['stage2']['q2']" v-on:answer-input="answerInput($event, 'stage2', 2)"></answer-input>
-                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
-                　
-                </div>
-
+                 <section class="section bg-color--keycolor">
+          <div class="container">
+            <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>真ん中の答えを書きなさい</h2>
+           
+            <answer-input v-bind:correct="correctAnswer['stage2']['q2']" v-on:answer-input="answerInput($event, 'stage2', 2, 'stage3')"></answer-input>
+            <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+          </div>
+        </section>
 
                   
 
 
-                <div class="column">
-
-                  <figure class="image__container">
-                    <img src="assets/images/謎第二問目.png" alt="">
-                  </figure>
-
-                  <answer-input v-bind:correct="correctAnswer['stage2']['q3']" v-on:answer-input="answerInput($event, 'stage2', 3)"></answer-input>
-                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
-
-                </div>
+                <section class="section bg-color--keycolor">
+          <div class="container">
+            <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>一番右の答えを書きなさい</h2>
+           
+            <answer-input v-bind:correct="correctAnswer['stage2']['q3']" v-on:answer-input="answerInput($event, 'stage2', 3, 'stage3')"></answer-input>
+            <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+          </div>
+        </section>
 
 
 
